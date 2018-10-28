@@ -1,0 +1,14 @@
+#Ignorar banco de dados
+db.sqlite3
+
+#Ignorar manage do django
+manage.py
+
+#Ignorar compilações automáticas
+__pycache__/
+
+#Ignorar modificações no banco de dados
+migrations/
+
+#Ignorar arquivos enviados
+media/

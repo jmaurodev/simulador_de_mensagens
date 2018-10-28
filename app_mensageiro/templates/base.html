@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simulador de Mensagens</title>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+  </head>
+
+  <header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="http://www.bdainfpqdt.eb.mil.br">
+        <img src="{% static 'img/bdainfpqdt.png' %}" width="50" height="50" title="Brigada de Infantaria Pára-quedista">
+      </a>
+      <span class="navbar-brand">Simulador de Mensagens</span>
+    </nav>
+  </header>
+
+    <div class="container-fluid">
+      {% if status %}
+      <div class="alert alert-dark text-center text-white bg-dark" role="alert">
+        {{status}}
+      </div>
+      {% endif %}
+
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    <footer class="card-footer">
+      <div class="card text-center text-dark bg-gradient-primary mb-3">
+        <div class="card-header">
+          Desenvolvimento
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">2º Ten Mauro</h5>
+          <a href="http://www.linkedin.com/in/jmaurodev" class="fab fa-linkedin fa-2x text-dark"></a>
+          <a href="https://github.com/jmaurodev" class="fab fa-github fa-2x text-dark"></a>
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=1637dc0d094e9014" class="far fa-envelope fa-2x text-dark"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+<html>
